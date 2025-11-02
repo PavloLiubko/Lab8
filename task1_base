@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+
+using namespace std;
+
+
+int main()
+{
+    setlocale(LC_ALL, "RU"); // українського кодування на жаль не знайшов 
+    
+    int A, B, C;
+    std::cout << "Ввдеіть значення числа A:";
+    std::cin >> A;
+    std::cout << "Ввдеіть значення числа B:";
+    std::cin >> B;
+    std::cout << "Ввдеіть значення числа C:";
+    std::cin >> C;
+    
+    if (A < B && B < C) {
+        cout << "Ваші перетворені числа:" << "\n" << "A = " << pow(A,2) << "\n" << "B = " << pow(B,2) << "\n" << "C = " << pow(C,2);
+    } 
+    else {
+        cout << "Ваші перетворені числа:" << "\n" << "A = " << A * 2 << "\n" << "B = " << B*2 << "\n" << "C = " << C*2;
+    }
+
+    return 0;
+}
+
