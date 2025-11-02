@@ -1,0 +1,60 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+
+using namespace std;
+
+double func1( double numb) {
+    return sinh(numb);
+}
+
+double func2(double numb) {
+    return pow(exp(1.0), numb);
+}
+
+double func3(double numb) {
+    return pow(numb, 2);
+}
+
+
+int main()
+{
+    setlocale(LC_ALL, "RU"); // українського кодування на жаль не знайшов 
+
+    double x, y, s, func;
+    std::string f;
+
+    cout << "Введіть значення х:";
+    cin >> x;
+    cout << "Введіть значення y:";
+    cin >> y;
+    cout << "Виберіть функцію f(x), яка буде виконуватись у вашому завданні з наведених: 1 - sh(x); 2 - x^2; 3 - e^x(Введіть номер функції):";
+    cin >> f;
+
+    if (f == "1") {
+        func = func1(x);
+    }
+    else if (f == "3") {
+        func = func2(x);
+    }
+    else if (f == "2") {
+        func = func3(x);
+    }
+
+    if (abs(x * y) > 10) {
+        cout << "s = " << abs(func) + log(y);
+    }
+    else if (abs(x * y) > 5 && abs(x*y) <= 10 ) {
+        cout << "s = " << pow(exp(1.0),func + y);
+    }
+    else if (abs(x * y) == 5) {
+        cout << "s = " << sin(x) + tan(y);
+    }
+    else {
+        cout << "На жаль жодна з умов задачі не справдилась";
+    }
+
+    return 0;
+}
+
+
