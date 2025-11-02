@@ -1,0 +1,35 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+
+using namespace std;
+
+
+int main()
+{
+    setlocale(LC_ALL, "RU"); // українського кодування на жаль не знайшов 
+
+    int a, b, c, x, y;
+
+    cout << "Введіть значення ребра а:"; 
+    cin >> a;
+    cout << "Введіть значення ребра b:";
+    cin >> b;
+    cout << "Введіть значення ребра c:";
+    cin >> c;
+    cout << "Введіть сторони отвору х:";
+    cin >> x;
+    cout << "Введіть сторони отвору y:";
+    cin >> y;
+
+    if (a == x && b == y || a == y && b == x || c == x && a == y || c == y && a == x || b == x && c == y || b == y && c == x) {
+        cout << "Цеглина пройде";
+    }
+    else {
+        cout << "Цеглина не пройде";
+    }
+
+
+    return 0;
+}
+
